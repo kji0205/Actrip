@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainSwiperCellCVC" id="gTV-IL-0wX" customClass="MainSwiperCellCVC" customModule="Actrip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="245" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="245" height="77"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6RN-JP-uhf">
+                        <rect key="frame" x="0.0" y="0.0" width="245" height="77"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="6RN-JP-uhf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Aet-MM-iZx"/>
+                <constraint firstAttribute="bottom" secondItem="6RN-JP-uhf" secondAttribute="bottom" id="GjU-H1-aeM"/>
+                <constraint firstItem="6RN-JP-uhf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gMM-Om-KEJ"/>
+                <constraint firstAttribute="trailing" secondItem="6RN-JP-uhf" secondAttribute="trailing" id="jNJ-jM-qXo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="245" height="77"/>
+            <connections>
+                <outlet property="banner" destination="6RN-JP-uhf" id="bWs-CV-9dT"/>
+            </connections>
+            <point key="canvasLocation" x="-3.6231884057971016" y="120.87053571428571"/>
+        </collectionViewCell>
+    </objects>
+</document>
