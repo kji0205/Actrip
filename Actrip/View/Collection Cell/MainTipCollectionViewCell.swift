@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class MainTipCollectionViewCell: UICollectionViewCell {
 
@@ -27,6 +28,14 @@ class MainTipCollectionViewCell: UICollectionViewCell {
 //        print(data ?? "MainTipCollectionViewCell: no data")
         image.downloaded(from: data.imgurl, contentMode: .scaleAspectFit)
         
+        guard let url = URL(string: data.link) else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        
+        image.onClick {
+            if let keyWindow = UIWindow.key {
+                keyWindow.rootViewController?.present(safariViewController, animated: true, completion: nil)
+            }
+        }
     }
 }
 

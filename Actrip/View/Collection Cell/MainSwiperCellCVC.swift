@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class MainSwiperCellCVC: UICollectionViewCell {
 
@@ -27,6 +28,13 @@ class MainSwiperCellCVC: UICollectionViewCell {
 //        print(data ?? "MainSwiperCellCVC: no data")
 //        self.banner.image = UIImage(named: data.imgurl)
         banner.downloaded(from: data.imgurl, contentMode: .scaleAspectFit)
-
+        guard let url = URL(string: data.link) else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        
+        banner.onClick {
+            if let keyWindow = UIWindow.key {
+                keyWindow.rootViewController?.present(safariViewController, animated: true, completion: nil)
+            }
+        }
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class MainBannerTVC: UITableViewCell {
 
@@ -26,6 +27,11 @@ class MainBannerTVC: UITableViewCell {
         }
         set {
             banner.downloaded(from: newValue?.imgurl ?? "", contentMode: .scaleAspectFit)
+            let tappy = MyUITapGestureRecognizer(target: self, action: #selector(self.imageTapped(tapGestureRecognizer:)))
+            banner.isUserInteractionEnabled = true
+            banner.addGestureRecognizer(tappy)
+            tappy.link = newValue?.link ?? ""
+            
             _mainScreenDataBanner = newValue
         }
     }
@@ -40,4 +46,13 @@ class MainBannerTVC: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @objc func imageTapped(tapGestureRecognizer: MyUITapGestureRecognizer)
+    {
+        guard let url = URL(string: tapGestureRecognizer.link) else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        
+        if let keyWindow = UIWindow.key {
+            keyWindow.rootViewController?.present(safariViewController, animated: true, completion: nil)
+        }
+    }
 }

@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SafariServices
+
+//var fromViewController: UIViewController?
 
 class MainMenuCollectionViewCell: UICollectionViewCell {
 
@@ -25,8 +28,28 @@ class MainMenuCollectionViewCell: UICollectionViewCell {
 //        self.layer.borderWidth = 1
     }
     
-    public func configure(imageSrc: String) {
-        self.image.image = UIImage(named: imageSrc)
+    public func configure(mainMenuData: [String]) {
+        self.image.image = UIImage(named: mainMenuData[0])
+        
+        let tappy = MyUITapGestureRecognizer(target: self, action: #selector(self.imageTapped(tapGestureRecognizer:)))
+        image.isUserInteractionEnabled = true
+        self.image.addGestureRecognizer(tappy)
+        tappy.link = mainMenuData[1]
     }
+    
+    @objc func imageTapped(tapGestureRecognizer: MyUITapGestureRecognizer)
+    {
+//        let tappedImage = tapGestureRecognizer.view as! UIImageView
 
+        guard let url = URL(string: tapGestureRecognizer.link) else { return }
+        let safariViewController = SFSafariViewController(url: url)
+        
+        if let keyWindow = UIWindow.key {
+            keyWindow.rootViewController?.present(safariViewController, animated: true, completion: nil)
+        }
+    }
+}
+
+class MyUITapGestureRecognizer: UITapGestureRecognizer {
+    var link = String()
 }

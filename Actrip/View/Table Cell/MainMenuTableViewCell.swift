@@ -11,7 +11,12 @@ import UIKit
 class MainMenuTableViewCell: UITableViewCell {
 
     let mainMenu = [
-        "isurf", "ibus", "ibbq", "ievent", "ibed", "ifood"
+        ["isurf", "https://actrip.co.kr/surf"],
+        ["ibus", "https://actrip.co.kr/surfbus"],
+        ["ibbq", "https://actrip.co.kr/bbq"],
+        ["ievent", "https://actrip.co.kr/event"],
+        ["ibed", "https://actrip.co.kr/staylist"],
+        ["ifood", "https://actrip.co.kr/eatlist"]
     ]
 
     static let identifier = "MainMenuTableViewCell"
@@ -45,7 +50,7 @@ extension MainMenuTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainMenuCollectionViewCell.identifier, for: indexPath) as! MainMenuCollectionViewCell
-        cell.configure(imageSrc: mainMenu[indexPath.row])
+        cell.configure(mainMenuData: mainMenu[indexPath.row])
         return cell
     }
     

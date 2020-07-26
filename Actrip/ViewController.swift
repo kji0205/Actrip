@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class ViewController: ATControllerBase
 {
     
     @IBOutlet private var table: UITableView!
@@ -150,7 +150,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource
         } else if indexPath.row == 3 {
             tableViewCellHeight = 120
         } else if indexPath.row == 4 {
-            tableViewCellHeight = 250
+            tableViewCellHeight = 700
         }
         
         return tableViewCellHeight

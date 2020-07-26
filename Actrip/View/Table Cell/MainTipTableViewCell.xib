@@ -93,6 +93,16 @@
                     <constraint firstItem="UYi-Lu-dpn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uHr-k0-NLK"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="tag1" destination="k4p-kN-m50" id="dQY-y7-8kV"/>
+                <outlet property="tag2" destination="nOq-hm-uWV" id="eJr-MU-vP1"/>
+                <outlet property="tag3" destination="dSV-Jh-B8v" id="RVL-xX-8zQ"/>
+                <outlet property="tag4" destination="r3K-KB-4Bb" id="vIU-Kb-ENJ"/>
+                <outlet property="tip1" destination="s8N-lr-hd5" id="JFb-MK-ptI"/>
+                <outlet property="tip2" destination="jfZ-Tg-BYo" id="iSe-0W-gRm"/>
+                <outlet property="tip3" destination="uoC-cy-RZB" id="Sy5-51-a6p"/>
+                <outlet property="tip4" destination="Iwl-5y-aCx" id="BrZ-Cu-PbY"/>
+            </connections>
             <point key="canvasLocation" x="-68.840579710144937" y="265.84821428571428"/>
         </tableViewCell>
     </objects>
