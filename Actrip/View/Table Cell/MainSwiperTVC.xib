@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,7 +15,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="325" height="96"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="y7A-iT-Oui">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="y7A-iT-Oui">
                         <rect key="frame" x="0.0" y="0.0" width="325" height="96"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XDE-49-k8j">
@@ -28,13 +27,14 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="y7A-iT-Oui" secondAttribute="trailing" id="ANf-MZ-Frx"/>
-                    <constraint firstItem="y7A-iT-Oui" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BAa-Ir-ADV"/>
-                    <constraint firstItem="y7A-iT-Oui" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="J4U-9f-ZHH"/>
-                    <constraint firstAttribute="bottom" secondItem="y7A-iT-Oui" secondAttribute="bottom" id="ODl-sk-SM1"/>
+                    <constraint firstAttribute="bottom" secondItem="y7A-iT-Oui" secondAttribute="bottom" id="90b-ZJ-UbX"/>
+                    <constraint firstItem="y7A-iT-Oui" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="FEE-1K-uZb"/>
+                    <constraint firstItem="y7A-iT-Oui" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Mfl-M8-c1Y"/>
+                    <constraint firstItem="y7A-iT-Oui" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cdZ-dl-daz"/>
+                    <constraint firstItem="y7A-iT-Oui" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="i8i-NN-c9w"/>
+                    <constraint firstAttribute="trailing" secondItem="y7A-iT-Oui" secondAttribute="trailing" id="jEI-tr-rNa"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="mainSwiperCV" destination="y7A-iT-Oui" id="Yhc-Cc-Tf7"/>
             </connections>

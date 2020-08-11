@@ -25,6 +25,7 @@ class MainSwiperTVC: UITableViewCell {
         set {
             _mainSwiperData = newValue
             mainSwiperCV.reloadData()
+//            self.contentView.addSubview(pageControl)
         }
     }
     
@@ -44,6 +45,17 @@ class MainSwiperTVC: UITableViewCell {
         // Configure the view for the selected state
     }
     
+//    lazy var pageControl: UIPageControl = {
+//        // Create a UIPageControl.
+//        let pageControl = UIPageControl(frame: CGRect(x: 0, y: self.contentView.frame.maxY - 30, width: self.contentView.frame.maxX, height:30))
+//        pageControl.backgroundColor = UIColor.clear // Set the number of pages to page control.
+//        pageControl.numberOfPages = mainSwiperData?.count ?? 1 // Set the current page.
+//        pageControl.currentPage = 1
+//        pageControl.isUserInteractionEnabled = true
+//
+//        return pageControl
+//    }()
+
 }
 
 extension MainSwiperTVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout

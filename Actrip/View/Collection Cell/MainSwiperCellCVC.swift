@@ -27,7 +27,7 @@ class MainSwiperCellCVC: UICollectionViewCell {
     public func configure(data: MainScreenDataBanner) {
 //        print(data ?? "MainSwiperCellCVC: no data")
 //        self.banner.image = UIImage(named: data.imgurl)
-        banner.downloaded(from: data.imgurl, contentMode: .scaleAspectFit)
+        banner.downloaded(from: data.imgurl, contentMode: .scaleAspectFill)
         guard let url = URL(string: data.link) else { return }
         let safariViewController = SFSafariViewController(url: url)
         
